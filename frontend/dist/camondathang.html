@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>.container {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+  display: flex;
+}
+</style>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiVlUeEb7rT7cwat35qtu9wMvjKJoVQYlOtwYrPoneTMnF6-jz_bqjQ-envgKygPts2SXg528R7qdLOezEJO35F6iVHfqqx-AWUGm3dLn4e2XfoW_iGji5oySwfwppeHTdf-y9ug99OKzTO/s320/Thank-You-Gif.gif" alt="">
+        <div id="countdown" style="font-size: 40px">Cảm ơn đã mua hàng.</div>
+        <div id="redirect" style="color: gray">Quay lại trang chủ sau <span id="seconds" style="color: #000; font-weight: bold">10</span> giây</div>
+    </div>
+
+    <script>function redirectToHomepage() {
+    window.location.href = "http://localhost:1234/";
+}
+function updateCountdown() {
+    const secondsElement = document.getElementById("seconds");
+    let seconds = parseInt(secondsElement.textContent);
+    seconds--;
+    if (seconds === 0) redirectToHomepage();
+    else {
+        secondsElement.textContent = seconds;
+        setTimeout(updateCountdown, 1000);
+    }
+}
+// Bắt đầu cập nhật số giây
+setTimeout(updateCountdown, 1000);
+
+</script>
+<script src="/camondathang.f01dbe3f.js"></script></body>
+
+</html>
+
+
+</html>
